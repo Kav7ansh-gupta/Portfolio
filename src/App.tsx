@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import SparkleNavbar from "./Components/Navbar";
 import SmokeyCursor from "./Components/BackgroundCursor";
 import HeroSection from "./Components/HeroSection";
@@ -40,7 +40,6 @@ const App = () => {
       gsap.globalTimeline.clear();
     };
   }, []);
-  
 
   return (
     <>
@@ -67,7 +66,7 @@ const App = () => {
             "Certifications",
             "Projects",
             "Contact",
-          ]} 
+          ]}
         />
 
         {/* Sections */}

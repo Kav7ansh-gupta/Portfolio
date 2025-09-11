@@ -1,4 +1,3 @@
-import React from "react";
 const projects = [
   {
     title: "Animated SaaS Landing",
