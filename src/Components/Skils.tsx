@@ -8,7 +8,6 @@ import {
   FaPython,
   FaJava,
 } from "react-icons/fa";
-import { motion } from "framer-motion";
 
 const list = [
   { icon: <FaHtml5 />, label: "HTML5" },
@@ -23,12 +22,7 @@ const list = [
 
 export default function Skills() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      id="skills"
-      className="py-16 px-12 mt-24"
-    >
+    <div className="py-16 px-12 ">
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-8 gap-4">
         {list.map(({ icon, label }) => (
           <div
@@ -40,6 +34,6 @@ export default function Skills() {
           </div>
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 }

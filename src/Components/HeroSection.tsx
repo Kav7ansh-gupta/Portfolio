@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     <>
       <motion.div
-        className="flex md:flex-row max-w-screen flex-col mt-23 p-11 z-0 "
+        className="flex md:flex-row max-w-screen flex-col px-11 pt-30 pb-0 z-0 "
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 4, y: 5 }}
         transition={{ duration: 0.9 }}

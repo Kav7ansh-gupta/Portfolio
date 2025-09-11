@@ -44,10 +44,7 @@ const App = () => {
   return (
     <>
       <div className="">
-        {/* Background */}
         <HexagonBackground className="fixed inset-0 flex items-center justify-center rounded-xl" />
-
-        {/* Cursor effect */}
         <SmokeyCursor
           simulationResolution={256}
           dyeResolution={2048}
@@ -56,37 +53,22 @@ const App = () => {
           splatForce={8000}
           enableShading={true}
         />
-
-        {/* Navbar */}
         <SparkleNavbar
-          items={[
-            "Home",
-            "About",
-            "Skills",
-            "Certifications",
-            "Projects",
-            "Contact",
-          ]}
+          items={["Home", "Skills", "About", "Projects", "Certifications"]}
         />
-
-        {/* Sections */}
-        <section id="home">
+        <section id="Home" className="h-screen">
           <HeroSection />
         </section>
-
-        <section id="skills">
+        <section id="Skills" className="h-screen">
           <Skills />
         </section>
-        <section id="about">
+        <section id="About" className="h-screen">
           <About />
         </section>
-
-        {/* Add more sections here to see the scroll reveal effect */}
-        <section id="projects">
+        <section id="Projects" className="h-screen">
           <Projects />
         </section>
-
-        <section id="contact">
+        <section id="Certifications" className="h-screen">
           <Certifications />
         </section>
       </div>
