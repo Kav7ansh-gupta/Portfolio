@@ -34,7 +34,7 @@ export const ShineButton: React.FC<ShineButtonProps> = ({
   return (
     <button
       onClick={onClick}
-      className={`relative text-white font-medium rounded-md min-w-[120px]transition-all duration-700 ease-in-out z-50 border-none cursor-pointer focus:outline-none     
+      className={`relative text-white font-medium rounded-md min-w-[120px]transition-all duration-700 ease-in-out border-none cursor-pointer focus:outline-none     
         hover:bg-[length:280%_auto] active:scale-95 ${className}`}
       style={{
         backgroundImage,
