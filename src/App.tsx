@@ -96,16 +96,16 @@ const App = () => {
         <section id="Home" className="h-screen">
           <HeroSection />
         </section>
-        <section id="Skills" className="h-screen">
+        <section id="Skills">
           <Skills />
         </section>
-        <section id="About" className="h-screen">
+        <section id="About">
           <About />
         </section>
-        <section id="Projects" className="h-screen">
+        <section id="Projects">
           <Projects />
         </section>
-        <section id="Certifications" className="h-screen">
+        <section id="Certifications">
           <Certifications />
         </section>
         <Dock
