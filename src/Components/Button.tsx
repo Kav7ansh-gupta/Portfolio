@@ -12,7 +12,7 @@ const sizeStyles: Record<
   NonNullable<ShineButtonProps["size"]>,
   { padding: string; fontSize: string }
 > = {
-  sm: { padding: "0.5rem 1rem", fontSize: "0.875rem" },
+  sm: { padding: "0.7rem", fontSize: "0.875rem" },
   md: { padding: "0.6rem 1.4rem", fontSize: "1rem" },
   lg: { padding: "0.8rem 1.8rem", fontSize: "1.125rem" },
 };
@@ -34,8 +34,7 @@ export const ShineButton: React.FC<ShineButtonProps> = ({
   return (
     <button
       onClick={onClick}
-      className={`relative text-white font-medium rounded-md min-w-[120px] min-h-[44px] transition-all duration-700 ease-in-out
-        border-none cursor-pointer shadow-[0px_0px_20px_rgba(71,164,255,0.5),0px_5px_5px_-1px_rgba(5,125,233,0.25),inset_4px_4px_8px_rgba(185,230,155,0.5),inset_-4px_-4px_8px_rgba(19,95,216,0.35)]
+      className={`relative text-white font-medium rounded-md min-w-[120px]transition-all duration-700 ease-in-out border-none cursor-pointer shadow-[0px_0px_20px_rgba(71,164,255,0.5),0px_5px_5px_-1px_rgba(5,125,233,0.25),inset_4px_4px_8px_rgba(185,230,155,0.5),inset_-4px_-4px_8px_rgba(19,95,216,0.35)]
         focus:outline-none     
         hover:bg-[length:280%_auto] active:scale-95 ${className}`}
       style={{

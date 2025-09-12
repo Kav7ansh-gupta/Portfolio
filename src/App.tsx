@@ -9,6 +9,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import About from "./Components/About";
 import Projects from "./Components/Projects";
 import Certifications from "./Components/Certifications";
+import Dock from "./Components/Dock";
+import { FcHome } from "react-icons/fc";
+import { GrCertificate } from "react-icons/gr";
+import { SiAboutdotme, SiSkillshare } from "react-icons/si";
+import { GoProjectSymlink } from "react-icons/go";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -28,7 +33,6 @@ const App = () => {
           ease: "power2.out",
           scrollTrigger: {
             trigger: sec,
-            start: "top 80%",
           },
         }
       );
@@ -40,6 +44,39 @@ const App = () => {
       gsap.globalTimeline.clear();
     };
   }, []);
+  const handleScroll = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" }); // smooth scroll
+    }
+  };
+  const dockItems = [
+    {
+      icon: <FcHome size={24} />,
+      label: "Home",
+      onClick: () => handleScroll("Home"),
+    },
+    {
+      icon: <SiAboutdotme size={40} />,
+      label: "About",
+      onClick: () => handleScroll("About"),
+    },
+    {
+      icon: <SiSkillshare size={40} />,
+      label: "Slills",
+      onClick: () => handleScroll("Skills"),
+    },
+    {
+      icon: <GoProjectSymlink size={24} />,
+      label: "My projects",
+      onClick: () => handleScroll("Projects"),
+    },
+    {
+      icon: <GrCertificate />,
+      label: "Certification",
+      onClick: () => handleScroll("Certifications"),
+    },
+  ];
 
   return (
     <>
@@ -71,6 +108,12 @@ const App = () => {
         <section id="Certifications" className="h-screen">
           <Certifications />
         </section>
+        <Dock
+          items={dockItems}
+          position="bottom"
+          magnification={70}
+          baseItemSize={50}
+        />
       </div>
     </>
   );
