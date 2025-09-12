@@ -15,7 +15,7 @@ function useDockItemSize(
   baseItemSize: number,
   magnification: number,
   distance: number,
-  ref: React.RefObject<HTMLDivElement>,
+  ref: React.RefObject<HTMLDivElement | null>,
   spring: { mass: number; stiffness: number; damping: number }
 ) {
   const mouseDistance = useTransform(mouseX, (val) => {
@@ -77,7 +77,6 @@ function DockItem({
     );
     return () => unsubscribe();
   }, [isHovered]);
-  
 
   return (
     <motion.div
@@ -89,7 +88,7 @@ function DockItem({
       onBlur={() => isHovered.set(0)}
       onClick={onClick}
       className="relative inline-flex items-center justify-center rounded-full 
-      bg-background    shadow-md  "
+        bg-background    shadow-md  "
       tabIndex={0}
       role="button"
       aria-haspopup="true"
@@ -108,7 +107,7 @@ function DockItem({
             exit={{ opacity: 0, y: 0 }}
             transition={{ duration: 0.2 }}
             className="absolute -top-6 left-1/2 w-fit whitespace-pre rounded-md 
-             border   bg-[#060606] px-2 py-0.5 text-xs text-white"
+              border   bg-[#060606] px-2 py-0.5 text-xs text-white"
             style={{ x: "-50%" }}
             role="tooltip"
           >
