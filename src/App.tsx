@@ -96,11 +96,11 @@ const App = () => {
         <section id="Home" className="h-screen">
           <HeroSection />
         </section>
-        <section id="Skills">
-          <Skills />
-        </section>
         <section id="About">
           <About />
+        </section>
+        <section id="Skills">
+          <Skills />
         </section>
         <section id="Projects">
           <Projects />

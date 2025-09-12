@@ -4,6 +4,15 @@ import { ShineButton } from "./Button";
 import { TypingText } from "./animate-ui/text/typing";
 import CuteAvatarPlaceholder from "./HeroAnimation";
 const HeroSection = () => {
+  const handleScroll = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" }); // smooth scroll
+    }
+  };
+  const handleClick = () => {
+    window.location.href = "mailto:kavyanshgupta119@gmail.com";
+  };
   return (
     <>
       <motion.div
@@ -26,18 +35,19 @@ const HeroSection = () => {
             />
           </p>
           <div className="hidden md:block">
-            <div className="mt-4 flex flex-wrap items-center gap-4 ">
+            <div className="mt-4 flex flex-wrap items-center gap-4">
               <ShineButton
+                onClick={(onclick = () => handleScroll("Projects"))}
                 label="See my Projects"
                 size="md"
                 bgColor="linear-gradient(325deg, hsla(315, 49%, 43%, 1.00) 0%, hsla(286, 90%, 41%, 1.00) 55%, hsla(313, 42%, 58%, 1.00) 90%)"
-              />
+              ></ShineButton>
               <ShineButton
+                onClick={handleClick}
                 label="Let’s Work Together"
                 size="md"
                 bgColor="linear-gradient(325deg, hsla(315, 49%, 43%, 1.00) 0%, hsla(286, 90%, 41%, 1.00) 55%, hsla(313, 42%, 58%, 1.00) 90%)"
               />
-
               <a
                 href="/resume.pdf"
                 className="inline-flex items-center gap-2 px-4 py-3 rounded-lg bg-white/5 hover:bg-white/10 transition"
@@ -49,11 +59,13 @@ const HeroSection = () => {
           <div className="md:hidden block">
             <div className="mt-6 flex gap-4">
               <ShineButton
+                onClick={(onclick = () => handleScroll("Projects"))}
                 label="See my Projects"
                 size="sm"
                 bgColor="linear-gradient(325deg, hsla(315, 49%, 43%, 1.00) 0%, hsla(286, 90%, 41%, 1.00) 55%, hsla(313, 42%, 58%, 1.00) 90%)"
               />
               <ShineButton
+                onClick={handleClick}
                 label="Let’s Work Together"
                 size="sm"
                 bgColor="linear-gradient(325deg, hsla(315, 49%, 43%, 1.00) 0%, hsla(286, 90%, 41%, 1.00) 55%, hsla(313, 42%, 58%, 1.00) 90%)"
