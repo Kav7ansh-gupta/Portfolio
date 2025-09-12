@@ -52,14 +52,19 @@ const App = () => {
   };
   const dockItems = [
     {
-      icon: <FcHome size={24} />,
-      label: "Home",
-      onClick: () => handleScroll("Home"),
+      icon: <GrCertificate />,
+      label: "Certification",
+      onClick: () => handleScroll("Certifications"),
     },
     {
       icon: <SiAboutdotme size={40} />,
       label: "About",
       onClick: () => handleScroll("About"),
+    },
+    {
+      icon: <FcHome size={24} />,
+      label: "Home",
+      onClick: () => handleScroll("Home"),
     },
     {
       icon: <SiSkillshare size={40} />,
@@ -71,17 +76,12 @@ const App = () => {
       label: "My projects",
       onClick: () => handleScroll("Projects"),
     },
-    {
-      icon: <GrCertificate />,
-      label: "Certification",
-      onClick: () => handleScroll("Certifications"),
-    },
   ];
 
   return (
     <>
       <div className="">
-        <HexagonBackground className="fixed inset-0 flex items-center justify-center rounded-xl" />
+        <HexagonBackground className="fixed " />
         <SmokeyCursor
           simulationResolution={256}
           dyeResolution={2048}
@@ -111,8 +111,8 @@ const App = () => {
         <Dock
           items={dockItems}
           position="bottom"
-          magnification={70}
-          baseItemSize={50}
+          panelHeight={75}
+          baseItemSize={60}
         />
       </div>
     </>

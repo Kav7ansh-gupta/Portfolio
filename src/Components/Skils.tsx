@@ -29,8 +29,8 @@ export default function Skills() {
             key={label}
             className="p-4 rounded-xl bg-gray-400/20 backdrop-blur-3xl border border-gray-400 flex flex-col items-center gap-2 hover:-translate-y-1 hover:shadow-blue-300 transition"
           >
-            <div className="text-3xl">{icon}</div>
-            <p className="text-sm">{label}</p>
+            <div className="text-3xl dark:text-white text-black">{icon}</div>
+            <p className="text-sm dark:text-white text-black ">{label}</p>
           </div>
         ))}
       </div>

@@ -57,7 +57,6 @@ function DockItem({
   magnification,
   distance,
   spring,
-  badgeCount,
 }: DockItemProps) {
   const ref = useRef<HTMLDivElement>(null);
   const isHovered = useMotionValue(0);
@@ -87,18 +86,14 @@ function DockItem({
       onFocus={() => isHovered.set(1)}
       onBlur={() => isHovered.set(0)}
       onClick={onClick}
-      className="relative inline-flex items-center justify-center rounded-full 
-        bg-background    shadow-md  "
+      className="relative inline-flex items-center justify-center rounded-full shadow-md  bg-gradient-to-br from-purple-400 from-40% bg-pink-400 backdrop-blur-3xl"
       tabIndex={0}
       role="button"
       aria-haspopup="true"
     >
-      <div className="flex items-center justify-center">{icon}</div>
-      {badgeCount !== undefined && badgeCount > 0 && (
-        <span className="absolute -top-2 -right-2 flex items-center justify-center w-5 h-5 text-xs font-bold text-white bg-red-500 rounded-full">
-          {badgeCount > 99 ? "99+" : badgeCount}
-        </span>
-      )}
+      <div className="flex items-center justify-center text-black dark:text-amber-50">
+        {icon}
+      </div>
       <AnimatePresence>
         {showLabel && (
           <motion.div
@@ -107,7 +102,7 @@ function DockItem({
             exit={{ opacity: 0, y: 0 }}
             transition={{ duration: 0.2 }}
             className="absolute -top-6 left-1/2 w-fit whitespace-pre rounded-md 
-              border   bg-[#060606] px-2 py-0.5 text-xs text-white"
+                border px-2 py-0.5 text-xs text-black dark:text-white"
             style={{ x: "-50%" }}
             role="tooltip"
           >
@@ -176,7 +171,7 @@ export default function Dock({
             isHovered.set(0);
             mouseX.set(Infinity);
           }}
-          className={`fixed w-screen bottom-0 transform flex justify-around items-center gap-3 border-2 px-3 pb-1 backdrop-blur-xl ${className}`}
+          className={`fixed w-screen bottom-0 transform flex justify-around items-center gap-3 border-purple-400 border-t-1 backdrop-blur-sm${className}`}
           style={{ height: panelHeight }}
           role="toolbar"
           aria-label="Application dock"
@@ -192,7 +187,6 @@ export default function Dock({
               magnification={magnification}
               distance={distance}
               spring={spring}
-              badgeCount={item.badgeCount}
             />
           ))}
         </motion.div>

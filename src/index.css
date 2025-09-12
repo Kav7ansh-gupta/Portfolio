@@ -11,9 +11,21 @@ body,
 ::-webkit-scrollbar {
   display: none;
 }
-::-webkit-scrollbar-thumb {
-  background: #334155;
-  border-radius: 9999px;
+/* index.css */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 @theme inline {
