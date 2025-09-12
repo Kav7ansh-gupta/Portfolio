@@ -4,12 +4,6 @@ import { ShineButton } from "./Button";
 import { TypingText } from "./animate-ui/text/typing";
 import CuteAvatarPlaceholder from "./HeroAnimation";
 const HeroSection = () => {
-  const handleScroll = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" }); // smooth scroll
-    }
-  };
   const handleClick = () => {
     window.location.href = "mailto:kavyanshgupta119@gmail.com";
   };
@@ -36,12 +30,13 @@ const HeroSection = () => {
           </p>
           <div className="hidden md:block">
             <div className="mt-4 flex flex-wrap items-center gap-4">
+              <a href="#Projects">
               <ShineButton
-                onClick={(onclick = () => handleScroll())}
                 label="See my Projects"
                 size="md"
                 bgColor="linear-gradient(325deg, hsla(315, 49%, 43%, 1.00) 0%, hsla(286, 90%, 41%, 1.00) 55%, hsla(313, 42%, 58%, 1.00) 90%)"
-              ></ShineButton>
+              />
+              </a>
               <ShineButton
                 onClick={handleClick}
                 label="Let’s Work Together"
