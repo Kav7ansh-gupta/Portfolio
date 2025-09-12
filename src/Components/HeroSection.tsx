@@ -37,7 +37,7 @@ const HeroSection = () => {
           <div className="hidden md:block">
             <div className="mt-4 flex flex-wrap items-center gap-4">
               <ShineButton
-                onClick={(onclick = () => handleScroll("Projects"))}
+                onClick={(onclick = () => handleScroll())}
                 label="See my Projects"
                 size="md"
                 bgColor="linear-gradient(325deg, hsla(315, 49%, 43%, 1.00) 0%, hsla(286, 90%, 41%, 1.00) 55%, hsla(313, 42%, 58%, 1.00) 90%)"
