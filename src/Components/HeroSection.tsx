@@ -53,11 +53,13 @@ const HeroSection = () => {
           </div>
           <div className="md:hidden block">
             <div className="mt-6 flex gap-4">
-              <ShineButton
-                label="See my Projects"
-                size="sm"
-                bgColor="linear-gradient(325deg, hsla(315, 49%, 43%, 1.00) 0%, hsla(286, 90%, 41%, 1.00) 55%, hsla(313, 42%, 58%, 1.00) 90%)"
-              />
+              <a href="#Projects">
+                <ShineButton
+                  label="See my Projects"
+                  size="sm"
+                  bgColor="linear-gradient(325deg, hsla(315, 49%, 43%, 1.00) 0%, hsla(286, 90%, 41%, 1.00) 55%, hsla(313, 42%, 58%, 1.00) 90%)"
+                />
+              </a>
               <ShineButton
                 onClick={handleClick}
                 label="Let’s Work Together"
