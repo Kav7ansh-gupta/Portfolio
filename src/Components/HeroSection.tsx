@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaDownload } from "react-icons/fa";
 import { ShineButton } from "./Button";
 import { TypingText } from "./animate-ui/text/typing";
-import CuteAvatarPlaceholder from "./HeroAnimation";
+import HeroAnimation from "./HeroAnimation";
 const HeroSection = () => {
   const handleClick = () => {
     window.location.href = "mailto:kavyanshgupta119@gmail.com";
@@ -15,7 +15,7 @@ const HeroSection = () => {
         animate={{ opacity: 7, y: 20 }}
         transition={{ duration: 1.8 }}
       >
-        <div className="md:w-6/10 sm:w-full md:px-13  text-gray-400">
+        <div className="md:min-w-6/10 sm:w-full md:px-13  text-gray-400">
           <h1 className="text-3xl sm:text-5xl font-extrabold  leading-tight mt-2">
             Hi, I'm <span className="text-purple-400">Kavyansh gupta </span>I
             build ideas into beautiful, fast, and scalable apps
@@ -30,12 +30,13 @@ const HeroSection = () => {
           </p>
           <div className="hidden md:block">
             <div className="mt-4 flex flex-wrap items-center gap-4">
-              <ShineButton
-                onClick={(onclick = () => handleScroll("Projects"))}
-                label="See my Projects"
-                size="md"
-                bgColor="linear-gradient(325deg, hsla(315, 49%, 43%, 1.00) 0%, hsla(286, 90%, 41%, 1.00) 55%, hsla(313, 42%, 58%, 1.00) 90%)"
-              ></ShineButton>
+              <a href="#Projects">
+                <ShineButton
+                  label="See my Projects"
+                  size="md"
+                  bgColor="linear-gradient(325deg, hsla(315, 49%, 43%, 1.00) 0%, hsla(286, 90%, 41%, 1.00) 55%, hsla(313, 42%, 58%, 1.00) 90%)"
+                />
+              </a>
               <ShineButton
                 onClick={handleClick}
                 label="Let’s Work Together"
@@ -66,26 +67,30 @@ const HeroSection = () => {
               />
             </div>
           </div>
-          <div className="mt-6 flex items-center gap-4 text-xl">
-            <a
-              className="hover:text-primary"
-              href="https://github.com/Kav7ansh-gupta"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaGithub />
-            </a>
-            <a
-              className="hover:text-primary"
-              href="https://linkedin.com/in/Kav7ansh-gupta"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaLinkedin />
-            </a>
+          <div className="hidden md:block">
+            <div className="mt-6 flex items-center gap-5 text-4xl">
+              <a
+                className="hover:text-primary"
+                href="https://github.com/Kav7ansh-gupta"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaGithub />
+              </a>
+              <a
+                className="hover:text-primary"
+                href="https://linkedin.com/in/Kav7ansh-gupta"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaLinkedin />
+              </a>
+            </div>
           </div>
         </div>
-        <CuteAvatarPlaceholder />
+        <div className="w-4/10 hidden md:block">
+          <HeroAnimation />
+        </div>
       </motion.div>
     </>
   );

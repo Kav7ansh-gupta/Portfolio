@@ -1,5 +1,6 @@
 import React, { useState, useRef, useLayoutEffect } from "react";
 import { gsap } from "gsap";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 interface SparkleNavbarProps {
   items: string[];
@@ -249,6 +250,26 @@ const SparkleNavbar: React.FC<SparkleNavbarProps> = ({
               ))}
             </ul>
             <div className="active-element" ref={activeElementRef} />
+          </div>
+          <div className="md:hidden block">
+            <div className=" flex items-center gap-5 text-white text-2xl">
+              <a
+                className="hover:text-primary"
+                href="https://github.com/Kav7ansh-gupta"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaGithub />
+              </a>
+              <a
+                className="hover:text-primary"
+                href="https://linkedin.com/in/Kav7ansh-gupta"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaLinkedin />
+              </a>
+            </div>
           </div>
         </nav>
       </header>
