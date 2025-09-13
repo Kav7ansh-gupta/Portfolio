@@ -30,13 +30,12 @@ const HeroSection = () => {
           </p>
           <div className="hidden md:block">
             <div className="mt-4 flex flex-wrap items-center gap-4">
-              <a href="#Projects">
               <ShineButton
+                onClick={(onclick = () => handleScroll("Projects"))}
                 label="See my Projects"
                 size="md"
                 bgColor="linear-gradient(325deg, hsla(315, 49%, 43%, 1.00) 0%, hsla(286, 90%, 41%, 1.00) 55%, hsla(313, 42%, 58%, 1.00) 90%)"
-              />
-              </a>
+              ></ShineButton>
               <ShineButton
                 onClick={handleClick}
                 label="Let’s Work Together"
@@ -53,13 +52,12 @@ const HeroSection = () => {
           </div>
           <div className="md:hidden block">
             <div className="mt-6 flex gap-4">
-              <a href="#Projects">
               <ShineButton
+                onClick={(onclick = () => handleScroll("Projects"))}
                 label="See my Projects"
                 size="sm"
                 bgColor="linear-gradient(325deg, hsla(315, 49%, 43%, 1.00) 0%, hsla(286, 90%, 41%, 1.00) 55%, hsla(313, 42%, 58%, 1.00) 90%)"
               />
-              </a>
               <ShineButton
                 onClick={handleClick}
                 label="Let’s Work Together"
