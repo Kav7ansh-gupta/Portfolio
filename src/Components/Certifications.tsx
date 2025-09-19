@@ -1,34 +1,47 @@
-const items = [
-  {
-    title: "MongoDB Basics for Students",
-    by: "MongoDB",
-    year: "2024",
-    image: "src/assets/MongoDB.png",
-  },
-];
+import TrueFocus from "./animate-ui/text/ShinyText.tsx";
+import DomeGallery from "./DomeGallery.tsx";
 
-export default function Certifications() {
+const Certifications = () => {
+  const items = [
+    {
+      src: "src/assets/MongoDB.png",
+    },
+  ];
   return (
-    <div className="grid md:grid-cols-2 justify-center grid-row gap-4 p-20  ">
-      {items.map((c) => (
-        <div
-          key={c.title}
-          className="card bg-base-100 w-80 shadow-sm p-8 rounded-xl bg-white/5 border border-white/10 hover:-translate-y-1 hover:shadow-glow transition"
-        >
-          <div className="card-body">
-            <h2 className="card-title text-2xl text-gray-500 mb-3">
-              {c.title}
-            </h2>
-          </div>
-          <figure>
-            <img src={c.image} alt="Shoes" />
-          </figure>
-          <div className=" flex justify-between mt-3 text-gray-500">
-            <p className="text-gray-500">{c.by}</p>
-            <p className="text-gray-500">{c.year}</p>
-          </div>
+    <div className="">
+      <div className=" max-w-screen m-6 ">
+        <TrueFocus
+          sentence="My Certificates"
+          manualMode={false}
+          blurAmount={5}
+          borderColor="purple"
+          animationDuration={1.4}
+          pauseBetweenAnimations={3}
+        />
+        <div className="md:hidden min-w-20 max-w-screen h-90 p-3 md:p-5 border-purple-400/85 backdrop-blur-[2px] rounded-2xl border-5 shadow-purple-300 shadow-md box mt-7">
+          <DomeGallery
+            fit={5}
+            images={items}
+            grayscale={false}
+            minRadius={800}
+            openedImageWidth="auto"
+            openedImageHeight="auto"
+            dragSensitivity={50}
+          />
         </div>
-      ))}
+        <div className=" hidden md:block max-w-screen h-screen p-0 md:p-5  border-purple-400/85 backdrop-blur-[2px] rounded-2xl border-4 mt-7">
+          <DomeGallery
+            fitBasis="auto"
+            images={items}
+            grayscale={false}
+            minRadius={1800}
+            openedImageWidth="auto"
+            dragSensitivity={50}
+          />
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+export default Certifications;

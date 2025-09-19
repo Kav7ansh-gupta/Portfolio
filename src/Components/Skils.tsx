@@ -8,6 +8,7 @@ import {
   FaPython,
   FaJava,
 } from "react-icons/fa";
+import TrueFocus from "./animate-ui/text/ShinyText";
 
 const list = [
   { icon: <FaHtml5 />, label: "HTML5" },
@@ -23,6 +24,14 @@ const list = [
 export default function Skills() {
   return (
     <div className="py-16 px-12 ">
+      <TrueFocus
+        sentence="My Skills"
+        manualMode={false}
+        blurAmount={5}
+        borderColor="purple"
+        animationDuration={1.4}
+        pauseBetweenAnimations={3}
+      />
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-8 gap-4">
         {list.map(({ icon, label }) => (
           <div

@@ -12,7 +12,7 @@ const sizeStyles: Record<
   NonNullable<ShineButtonProps["size"]>,
   { padding: string; fontSize: string }
 > = {
-  sm: { padding: "0.7rem", fontSize: "0.875rem" },
+  sm: { padding: "0.7rem", fontSize: "0.8rem" },
   md: { padding: "0.6rem 1.4rem", fontSize: "1rem" },
   lg: { padding: "0.8rem 1.8rem", fontSize: "1.125rem" },
 };

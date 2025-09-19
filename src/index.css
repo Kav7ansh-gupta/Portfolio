@@ -10,7 +10,7 @@ body,
   height: 100%;
 }
 ::-webkit-scrollbar {
-  display: none;
+  display: hidden;
 }
 /* index.css */
 :root {

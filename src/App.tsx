@@ -4,7 +4,7 @@ import SmokeyCursor from "./Components/BackgroundCursor";
 import HeroSection from "./Components/HeroSection";
 import Skills from "./Components/Skils";
 import { HexagonBackground } from "./Components/animate-ui/backgrounds/hexagon";
-import { gsap } from "gsap";
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import About from "./Components/About";
 import Projects from "./Components/Projects";
@@ -14,20 +14,21 @@ import { FcHome } from "react-icons/fc";
 import { GrCertificate } from "react-icons/gr";
 import { SiAboutdotme, SiSkillshare } from "react-icons/si";
 import { GoProjectSymlink } from "react-icons/go";
+import Footer from "./Components/Footer";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
   useEffect(() => {
     // subtle reveal for sections
-    const sections = gsap.utils.toArray("section") as HTMLElement[];
+    const sections = gsap.utils.toArray<HTMLElement>("section");
 
     sections.forEach((sec) => {
       gsap.fromTo(
         sec,
         { opacity: 0, y: 40 },
         {
-          opacity: 4,
+          opacity: 1,
           y: 0,
           duration: 0.8,
           ease: "power2.out",
@@ -40,16 +41,19 @@ const App = () => {
 
     // ✅ cleanup to prevent memory leaks
     return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-      gsap.globalTimeline.clear();
+      ScrollTrigger.getAll().forEach((trigger: { kill: () => any }) =>
+        trigger.kill()
+      );
     };
   }, []);
+
   const handleScroll = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" }); // smooth scroll
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   const dockItems = [
     {
       icon: <GrCertificate />,
@@ -68,7 +72,7 @@ const App = () => {
     },
     {
       icon: <SiSkillshare size={40} />,
-      label: "Slills",
+      label: "Skills",
       onClick: () => handleScroll("Skills"),
     },
     {
@@ -86,7 +90,7 @@ const App = () => {
           simulationResolution={256}
           dyeResolution={2048}
           densityDissipation={2}
-          curl={5}
+          curl={5}  
           splatForce={8000}
           enableShading={true}
         />
@@ -114,6 +118,7 @@ const App = () => {
           panelHeight={75}
           baseItemSize={60}
         />
+        <Footer />
       </div>
     </>
   );
