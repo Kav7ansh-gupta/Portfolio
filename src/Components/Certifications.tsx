@@ -7,6 +7,12 @@ const Certifications = () => {
     {
       src: cirtificates.mongodb,
     },
+    {
+      src: cirtificates.bgmi,
+    },
+    {
+      src: cirtificates.hackovision,
+    },
   ];
   return (
     <div className="">
