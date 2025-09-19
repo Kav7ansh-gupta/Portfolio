@@ -1,5 +1,5 @@
-import TrueFocus from "./animate-ui/text/ShinyText.tsx";
-import DomeGallery from "./DomeGallery.tsx";
+import TrueFocus from "./animate-ui/text/ShinyText";
+import DomeGallery from "./DomeGallery";
 
 const Certifications = () => {
   const items = [
