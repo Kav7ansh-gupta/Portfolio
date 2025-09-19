@@ -1,5 +1,6 @@
 import TrueFocus from "./animate-ui/text/ShinyText";
 import ProfileCard from "./ProfileCard";
+import { Profile } from "../Assets/assets";
 
 export default function About() {
   return (
@@ -51,9 +52,9 @@ export default function About() {
                 handle="Codewithkav7ansh"
                 status="Online"
                 contactText="Contact Me"
-                avatarUrl="src/assets/profile.png"
-                miniAvatarUrl="src/assets/profile.jpg"
-                iconUrl="src/assets/profile-bg.jpg"
+                avatarUrl={Profile.profile}
+                miniAvatarUrl={Profile.miniProfile}
+                iconUrl={Profile.profileBg}
                 showUserInfo={true}
                 enableTilt={true}
                 enableMobileTilt={false}
@@ -71,9 +72,9 @@ export default function About() {
               handle="Codewithkav7ansh"
               status="Online"
               contactText="Contact Me"
-              avatarUrl="src/assets/profile.png"
-              miniAvatarUrl="src/assets/profile.jpg"
-              iconUrl="src/assets/profile-bg.jpg"
+              avatarUrl={Profile.profile}
+              miniAvatarUrl={Profile.miniProfile}
+              iconUrl={Profile.profileBg}
               showUserInfo={true}
               enableTilt={true}
               enableMobileTilt={false}

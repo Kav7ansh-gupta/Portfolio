@@ -1,10 +1,11 @@
 import TrueFocus from "./animate-ui/text/ShinyText";
 import DomeGallery from "./DomeGallery";
+import { cirtificates } from "@/Assets/assets";
 
 const Certifications = () => {
   const items = [
     {
-      src: "src/assets/MongoDB.png",
+      src: cirtificates.mongodb,
     },
   ];
   return (
