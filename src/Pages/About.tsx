@@ -1,10 +1,11 @@
-import TrueFocus from "../Components/animate-ui/text/ShinyText";
+import TrueFocus from "../Components/animate-ui/text/TureFocus";
 import ProfileCard from "../Components/ProfileCard";
 import { Profile } from "../Assets/assets";
+import OrbitCard from "@/Components/lightswind/orbit-card";
 
 export default function About() {
   return (
-    <section id="about" className="dark:text-white text-black p-5 md:p-16">
+    <div className="dark:text-white text-black p-5 md:p-16">
       <TrueFocus
         sentence="About Me"
         manualMode={false}
@@ -15,7 +16,7 @@ export default function About() {
       />
       <div className="hidden md:block max-w-screen">
         <div className="flex justify-between mt-13">
-          <div className="max-w-6/10 backdrop-opacity-90 border-2 border-purple-400 rounded-3xl p-6 shadow-2xl ">
+          <OrbitCard className="max-w-6/10  rounded-3xl  shadow-2xl ">
             <p className="p-2">
               Hi, I’m <span className="text-purple-300">Kavyansh Gupta</span> —
               a passionate BCA student, software developer, and tech enthusiast
@@ -43,7 +44,7 @@ export default function About() {
               To grow as a versatile developer, contribute to impactful
               projects, and keep pushing my boundaries as I learn and create.
             </p>
-          </div>
+          </OrbitCard>
           <div className="max-w-4/10">
             <div className="">
               <div>
@@ -115,6 +116,6 @@ export default function About() {
           </p>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

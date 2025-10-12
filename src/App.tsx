@@ -13,6 +13,7 @@ import { GoProjectSymlink } from "react-icons/go";
 import Footer from "./Components/Footer";
 import { Routes, Route } from "react-router-dom";
 import Projects from "./Pages/Projects";
+import Hero from "./Components/Hero";
 
 const App = () => {
   const navItems = [
@@ -49,6 +50,7 @@ const App = () => {
             path="/"
             element={
               <>
+                <Hero />
                 <HeroSection />
                 <About />
                 <Skills />

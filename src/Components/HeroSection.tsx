@@ -15,7 +15,7 @@ const HeroSection = () => {
         animate={{ opacity: 7, y: 20 }}
         transition={{ duration: 1.8 }}
       >
-        <div className="md:min-w-6/10 sm:w-full md:px-13  text-gray-400">
+        <div className="md:min-w-6/10 sm:w-full md:h-full h-screen md:px-13  text-gray-400">
           <h1 className="text-3xl sm:text-5xl font-extrabold  leading-tight mt-2">
             Hi, I'm <span className="text-purple-400">Kavyansh gupta </span>I
             build ideas into beautiful, fast, and scalable apps

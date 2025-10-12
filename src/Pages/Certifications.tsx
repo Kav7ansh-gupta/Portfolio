@@ -1,4 +1,4 @@
-import TrueFocus from "../Components/animate-ui/text/ShinyText";
+import TrueFocus from "../Components/animate-ui/text/TureFocus";
 import DomeGallery from "../Components/DomeGallery";
 import { cirtificates } from "@/Assets/assets";
 
