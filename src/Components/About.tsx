@@ -45,6 +45,29 @@ export default function About() {
             </p>
           </div>
           <div className="max-w-4/10">
+            <div className="">
+              <div>
+                <ProfileCard
+                  name="Kavyansh Gupta"
+                  title="Software Engineer"
+                  handle="Codewithkav7ansh"
+                  status="Online"
+                  contactText="Contact Me"
+                  avatarUrl={Profile.profile}
+                  miniAvatarUrl={Profile.miniProfile}
+                  iconUrl={Profile.profileBg}
+                  showUserInfo={true}
+                  enableTilt={true}
+                  enableMobileTilt={false}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="block md:hidden">
+        <div className="flex justify-center">
+          <div>
             <div>
               <ProfileCard
                 name="Kavyansh Gupta"
@@ -58,28 +81,9 @@ export default function About() {
                 showUserInfo={true}
                 enableTilt={true}
                 enableMobileTilt={false}
+                className=" "
               />
             </div>
-          </div>
-        </div>
-      </div>
-      <div className="block md:hidden">
-        <div className="flex justify-center">
-          <div>
-            <ProfileCard
-              name="Kavyansh Gupta"
-              title="Software Engineer"
-              handle="Codewithkav7ansh"
-              status="Online"
-              contactText="Contact Me"
-              avatarUrl={Profile.profile}
-              miniAvatarUrl={Profile.miniProfile}
-              iconUrl={Profile.profileBg}
-              showUserInfo={true}
-              enableTilt={true}
-              enableMobileTilt={false}
-              className=" "
-            />
           </div>
         </div>
         <div className=" mt-13 backdrop-opacity-90 border-2 border-purple-400 rounded-3xl p-4 shadow-2xl ">

@@ -9,6 +9,7 @@ import {
   MotionValue,
 } from "framer-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 function useDockItemSize(
   mouseX: MotionValue<number>,
@@ -39,19 +40,18 @@ function useDockItemSize(
 interface DockItemProps {
   icon: React.ReactNode;
   label: string;
-  onClick: () => void;
+  to: string;
   mouseX: MotionValue<number>;
   baseItemSize: number;
   magnification: number;
   distance: number;
   spring: { mass: number; stiffness: number; damping: number };
-  badgeCount?: number;
 }
 
 function DockItem({
   icon,
   label,
-  onClick,
+  to,
   mouseX,
   baseItemSize,
   magnification,
@@ -78,51 +78,52 @@ function DockItem({
   }, [isHovered]);
 
   return (
-    <motion.div
-      ref={ref}
-      style={{ width: size, height: size }}
-      onHoverStart={() => isHovered.set(1)}
-      onHoverEnd={() => isHovered.set(0)}
-      onFocus={() => isHovered.set(1)}
-      onBlur={() => isHovered.set(0)}
-      onClick={onClick}
-      className="relative inline-flex items-center justify-center rounded-full shadow-md  bg-gradient-to-br from-purple-400 from-40% bg-pink-400 backdrop-blur-3xl"
-      tabIndex={0}
-      role="button"
-      aria-haspopup="true"
+    <NavLink
+      to={to}
+      className={({ isActive }) =>
+        `relative inline-flex items-center justify-center rounded-full shadow-md bg-gradient-to-br 
+        from-purple-400 from-40% bg-pink-400 backdrop-blur-3xl transition-transform ${
+          isActive ? "ring-2 ring-purple-500 scale-110" : ""
+        }`
+      }
     >
-      <div className="flex items-center justify-center text-black dark:text-amber-50">
+      <motion.div
+        ref={ref}
+        style={{ width: size, height: size }}
+        onHoverStart={() => isHovered.set(1)}
+        onHoverEnd={() => isHovered.set(0)}
+        className="flex items-center justify-center text-black dark:text-amber-50"
+      >
         {icon}
-      </div>
-      <AnimatePresence>
-        {showLabel && (
-          <motion.div
-            initial={{ opacity: 0, y: 0 }}
-            animate={{ opacity: 1, y: -10 }}
-            exit={{ opacity: 0, y: 0 }}
-            transition={{ duration: 0.2 }}
-            className="absolute -top-6 left-1/2 w-fit whitespace-pre rounded-md 
+        <AnimatePresence>
+          {showLabel && (
+            <motion.div
+              initial={{ opacity: 0, y: 0 }}
+              animate={{ opacity: 1, y: -10 }}
+              exit={{ opacity: 0, y: 0 }}
+              transition={{ duration: 0.2 }}
+              className="absolute -top-6 left-1/2 w-fit whitespace-pre rounded-md 
                 border px-2 py-0.5 text-xs text-black dark:text-white"
-            style={{ x: "-50%" }}
-            role="tooltip"
-          >
-            {label}
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.div>
+              style={{ x: "-50%" }}
+              role="tooltip"
+            >
+              {label}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.div>
+    </NavLink>
   );
 }
 
-interface DockItem {
+interface DockItemConfig {
   icon: React.ReactNode;
   label: string;
-  onClick: () => void;
-  badgeCount?: number;
+  to: string;
 }
 
 interface DockProps {
-  items: DockItem[];
+  items: DockItemConfig[];
   className?: string;
   spring?: { mass: number; stiffness: number; damping: number };
   magnification?: number;
@@ -160,7 +161,7 @@ export default function Dock({
     <div className="block md:hidden">
       <motion.div
         style={{ height: animatedHeight }}
-        className=" flex max-w-full  items-center"
+        className="flex max-w-full items-center"
       >
         <motion.div
           onMouseMove={({ pageX }) => {
@@ -171,17 +172,15 @@ export default function Dock({
             isHovered.set(0);
             mouseX.set(Infinity);
           }}
-          className={`fixed w-screen bottom-0 transform flex justify-around items-center gap-3 border-purple-400 border-t-1 backdrop-blur-sm${className}`}
+          className={`fixed w-screen bottom-0 transform flex justify-around items-center gap-3 border-purple-400 border-t-1 backdrop-blur-sm ${className}`}
           style={{ height: panelHeight }}
-          role="toolbar"
-          aria-label="Application dock"
         >
           {items.map((item, index) => (
             <DockItem
               key={index}
               icon={item.icon}
               label={item.label}
-              onClick={item.onClick}
+              to={item.to}
               mouseX={mouseX}
               baseItemSize={baseItemSize}
               magnification={magnification}

@@ -1,13 +1,9 @@
-import { useEffect } from "react";
 import SparkleNavbar from "./Components/Navbar";
 import SmokeyCursor from "./Components/BackgroundCursor";
 import HeroSection from "./Components/HeroSection";
 import Skills from "./Components/Skils";
 import { HexagonBackground } from "./Components/animate-ui/backgrounds/hexagon";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import About from "./Components/About";
-import Projects from "./Components/Projects";
 import Certifications from "./Components/Certifications";
 import Dock from "./Components/Dock";
 import { FcHome } from "react-icons/fc";
@@ -15,71 +11,24 @@ import { GrCertificate } from "react-icons/gr";
 import { SiAboutdotme, SiSkillshare } from "react-icons/si";
 import { GoProjectSymlink } from "react-icons/go";
 import Footer from "./Components/Footer";
-
-gsap.registerPlugin(ScrollTrigger);
+import { Routes, Route } from "react-router-dom";
+import Projects from "./Components/Projects";
 
 const App = () => {
-  useEffect(() => {
-    // subtle reveal for sections
-    const sections = gsap.utils.toArray<HTMLElement>("section");
-
-    sections.forEach((sec) => {
-      gsap.fromTo(
-        sec,
-        { opacity: 0, y: 40 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: sec,
-          },
-        }
-      );
-    });
-
-    // ✅ cleanup to prevent memory leaks
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger: { kill: () => any }) =>
-        trigger.kill()
-      );
-    };
-  }, []);
-
-  const handleScroll = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  const navItems = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Projects", path: "/projects" },
+    { name: "Skills", path: "/skills" },
+    { name: "Cerification", path: "/certification" },
+  ];
 
   const dockItems = [
-    {
-      icon: <GrCertificate />,
-      label: "Certification",
-      onClick: () => handleScroll("Certifications"),
-    },
-    {
-      icon: <SiAboutdotme size={40} />,
-      label: "About",
-      onClick: () => handleScroll("About"),
-    },
-    {
-      icon: <FcHome size={24} />,
-      label: "Home",
-      onClick: () => handleScroll("Home"),
-    },
-    {
-      icon: <SiSkillshare size={40} />,
-      label: "Skills",
-      onClick: () => handleScroll("Skills"),
-    },
-    {
-      icon: <GoProjectSymlink size={24} />,
-      label: "My projects",
-      onClick: () => handleScroll("Projects"),
-    },
+    { icon: <FcHome />, label: "Home", to: "/" },
+    { icon: <SiAboutdotme />, label: "About", to: "/about" },
+    { icon: <SiSkillshare />, label: "Skills", to: "/skills" },
+    { icon: <GoProjectSymlink />, label: "Project", to: "/projects" },
+    { icon: <GrCertificate />, label: "Critification", to: "/cirtifiction" },
   ];
 
   return (
@@ -90,28 +39,29 @@ const App = () => {
           simulationResolution={256}
           dyeResolution={2048}
           densityDissipation={2}
-          curl={5}  
+          curl={5}
           splatForce={8000}
           enableShading={true}
         />
-        <SparkleNavbar
-          items={["Home", "Skills", "About", "Projects", "Certifications"]}
-        />
-        <section id="Home" className="h-screen">
-          <HeroSection />
-        </section>
-        <section id="About">
-          <About />
-        </section>
-        <section id="Skills">
-          <Skills />
-        </section>
-        <section id="Projects">
-          <Projects />
-        </section>
-        <section id="Certifications">
-          <Certifications />
-        </section>
+        <SparkleNavbar items={navItems} />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <HeroSection />
+                <About />
+                <Skills />
+                <Projects />
+                <Certifications />
+              </>
+            }
+          />
+          <Route path="/about" element={<About />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/certification" element={<Certifications />} />
+        </Routes>
         <Dock
           items={dockItems}
           position="bottom"
