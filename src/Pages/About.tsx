@@ -1,5 +1,5 @@
-import TrueFocus from "./animate-ui/text/ShinyText";
-import ProfileCard from "./ProfileCard";
+import TrueFocus from "../Components/animate-ui/text/ShinyText";
+import ProfileCard from "../Components/ProfileCard";
 import { Profile } from "../Assets/assets";
 
 export default function About() {

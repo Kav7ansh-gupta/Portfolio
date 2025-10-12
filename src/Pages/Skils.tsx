@@ -8,7 +8,7 @@ import {
   FaPython,
   FaJava,
 } from "react-icons/fa";
-import TrueFocus from "./animate-ui/text/ShinyText";
+import TrueFocus from "../Components/animate-ui/text/ShinyText";
 
 const list = [
   { icon: <FaHtml5 />, label: "HTML5" },

@@ -1,10 +1,10 @@
 import SparkleNavbar from "./Components/Navbar";
 import SmokeyCursor from "./Components/BackgroundCursor";
 import HeroSection from "./Components/HeroSection";
-import Skills from "./Components/Skils";
+import Skills from "./Pages/Skils";
 import { HexagonBackground } from "./Components/animate-ui/backgrounds/hexagon";
-import About from "./Components/About";
-import Certifications from "./Components/Certifications";
+import About from "./Pages/About";
+import Certifications from "./Pages/Certifications";
 import Dock from "./Components/Dock";
 import { FcHome } from "react-icons/fc";
 import { GrCertificate } from "react-icons/gr";
@@ -12,7 +12,7 @@ import { SiAboutdotme, SiSkillshare } from "react-icons/si";
 import { GoProjectSymlink } from "react-icons/go";
 import Footer from "./Components/Footer";
 import { Routes, Route } from "react-router-dom";
-import Projects from "./Components/Projects";
+import Projects from "./Pages/Projects";
 
 const App = () => {
   const navItems = [
