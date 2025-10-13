@@ -85,7 +85,7 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className=" mt-13 backdrop-opacity-90 border-2 border-purple-400 rounded-3xl p-4 shadow-2xl ">
+        <OrbitCard className=" mt-13 backdrop-opacity-90 border-2  rounded-3xl p-4 shadow-2xl ">
           <p className="text-sm">
             Hi, I’m Kavyansh Gupta — a passionate BCA student, software
             developer, and tech enthusiast who loves building creative solutions
@@ -112,7 +112,7 @@ export default function About() {
             To grow as a versatile developer, contribute to impactful projects,
             and keep pushing my boundaries as I learn and create.
           </p>
-        </div>
+        </OrbitCard>
       </div>
     </div>
   );

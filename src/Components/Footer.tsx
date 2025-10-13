@@ -1,27 +1,24 @@
-import { FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <div>
       <footer className="footer footer-horizontal footer-center text-purple-400 mt-10 p-10 absolute md:block hidden">
-        <nav>
+        <div className="mb-4">
           <div className="grid grid-flow-col gap-4">
-            <a>
+            <a href="https://x.com/kav7ansh_gupta?s=21">
               <FaTwitter size={36} />
             </a>
-            <a>
+            <a href="http://youtube.com/@codewithkav7ansh?si=rLOOMHN02zUqz9Ra">
               <FaYoutube size={36} />
             </a>
-            <a>
-              <FaFacebook size={36} />
+            <a href="https://www.instagram.com/code_with_kav7ansh?igsh=YWkxd3hzcDluOWYw&utm_source=qr">
+              <FaInstagram size={36} />
             </a>
           </div>
-        </nav>
+        </div>
         <aside>
-          <p>
-            Copyright © {new Date().getFullYear()} - All right reserved by ACME
-            Industries Ltd
-          </p>
+          <p>Copyright © {new Date().getFullYear()}</p>
         </aside>
       </footer>
     </div>
