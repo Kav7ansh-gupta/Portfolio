@@ -15,10 +15,10 @@ const Certifications = () => {
     },
   ];
   return (
-    <div className="">
-      <div className=" max-w-screen m-6 ">
+    <div className="dark:text-white text-black p-5 md:px-16">
+      <div className=" max-w-screen ">
         <TrueFocus
-          sentence="My Certificates"
+          sentence="Certification Gallery"
           manualMode={false}
           blurAmount={5}
           borderColor="purple"
@@ -36,7 +36,7 @@ const Certifications = () => {
             dragSensitivity={50}
           />
         </div>
-        <div className=" hidden md:block max-w-screen h-screen p-0 md:p-5  border-purple-400/85 backdrop-blur-[2px] rounded-2xl border-4 mt-7">
+        <div className=" hidden md:block max-w-screen h-screen p-0 md:p-5  border-purple-400/85 backdrop-blur-[2px] rounded-2xl border-4 mt-14">
           <DomeGallery
             fitBasis="auto"
             images={items}

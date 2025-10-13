@@ -78,7 +78,7 @@ const TrueFocus: React.FC<TrueFocusProps> = ({
   };
 
   return (
-    <div className="relative flex gap-4 flex-wrap mb-7" ref={containerRef}>
+    <div className="relative flex gap-4 flex-wrap mb-7 " ref={containerRef}>
       {words.map((word, index) => {
         const isActive = index === currentIndex;
         return (
@@ -87,7 +87,7 @@ const TrueFocus: React.FC<TrueFocusProps> = ({
             ref={(el) => {
               wordRefs.current[index] = el;
             }}
-            className="relative text-[2rem] md:text-[3rem] dark:text-white font-black cursor-pointer"
+            className="relative text-[2rem] md:text-[3rem] dark:text-white font-black cursor-pointer mt-20"
             style={
               {
                 filter: manualMode

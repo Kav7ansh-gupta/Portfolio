@@ -29,13 +29,13 @@ const App = () => {
     { icon: <SiAboutdotme />, label: "About", to: "/about" },
     { icon: <SiSkillshare />, label: "Skills", to: "/skills" },
     { icon: <GoProjectSymlink />, label: "Project", to: "/projects" },
-    { icon: <GrCertificate />, label: "Critification", to: "/cirtifiction" },
+    { icon: <GrCertificate />, label: "Certification", to: "/certification" },
   ];
 
   return (
     <>
-      <div className="">
-        <HexagonBackground className="fixed " />
+      <div className="relative">
+        <HexagonBackground className="fixed" />
         <SmokeyCursor
           simulationResolution={256}
           dyeResolution={2048}
@@ -51,10 +51,15 @@ const App = () => {
             element={
               <>
                 <Hero />
+
                 <HeroSection />
+
                 <About />
+
                 <Skills />
+
                 <Projects />
+
                 <Certifications />
               </>
             }
@@ -68,7 +73,7 @@ const App = () => {
           items={dockItems}
           position="bottom"
           panelHeight={75}
-          baseItemSize={60}
+          baseItemSize={50}
         />
         <Footer />
       </div>

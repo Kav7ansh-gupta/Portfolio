@@ -23,9 +23,9 @@ const list = [
 
 export default function Skills() {
   return (
-    <div className="py-16 px-12 ">
+    <div className="dark:text-white text-black px-5 md:px-16 ">
       <TrueFocus
-        sentence="My Skills"
+        sentence="Core Skills"
         manualMode={false}
         blurAmount={5}
         borderColor="purple"

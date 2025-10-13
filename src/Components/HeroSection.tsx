@@ -10,12 +10,12 @@ const HeroSection = () => {
   return (
     <>
       <motion.div
-        className="flex md:flex-row max-w-screen flex-col px-11 md:pt-34 pt-18   "
+        className="flex md:flex-row max-w-screen flex-col mt-30   "
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 7, y: 20 }}
         transition={{ duration: 1.8 }}
       >
-        <div className="md:min-w-6/10 sm:w-full md:h-full h-screen md:px-13  text-gray-400">
+        <div className="md:min-w-6/10 sm:w-full md:h-full md:px-13  text-gray-400">
           <h1 className="text-3xl sm:text-5xl font-extrabold  leading-tight mt-2">
             Hi, I'm <span className="text-purple-400">Kavyansh gupta </span>I
             build ideas into beautiful, fast, and scalable apps
@@ -89,7 +89,7 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        <div className="w-4/10 hidden md:block">
+        <div className="w-4/10 hidden md:block h-0">
           <HeroAnimation />
         </div>
       </motion.div>

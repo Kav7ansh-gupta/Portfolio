@@ -5,7 +5,7 @@ import OrbitCard from "@/Components/lightswind/orbit-card";
 
 export default function About() {
   return (
-    <div className="dark:text-white text-black p-5 md:p-16">
+    <div className="dark:text-white text-black px-5 md:px-16 ">
       <TrueFocus
         sentence="About Me"
         manualMode={false}
@@ -15,7 +15,7 @@ export default function About() {
         pauseBetweenAnimations={3}
       />
       <div className="hidden md:block max-w-screen">
-        <div className="flex justify-between mt-13">
+        <div className="flex justify-between ">
           <OrbitCard className="max-w-6/10  rounded-3xl  shadow-2xl ">
             <p className="p-2">
               Hi, I’m <span className="text-purple-300">Kavyansh Gupta</span> —
