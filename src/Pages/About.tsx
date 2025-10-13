@@ -55,8 +55,7 @@ export default function About() {
                   status="Online"
                   contactText="Contact Me"
                   avatarUrl={Profile.profile}
-                  miniAvatarUrl={Profile.miniProfile}
-                  iconUrl={Profile.profileBg}
+                  miniAvatarUrl={Profile.profile}
                   showUserInfo={true}
                   enableTilt={true}
                   enableMobileTilt={false}
@@ -77,8 +76,7 @@ export default function About() {
                 status="Online"
                 contactText="Contact Me"
                 avatarUrl={Profile.profile}
-                miniAvatarUrl={Profile.miniProfile}
-                iconUrl={Profile.profileBg}
+                miniAvatarUrl={Profile.profile}
                 showUserInfo={true}
                 enableTilt={true}
                 enableMobileTilt={false}

@@ -3,6 +3,7 @@ import { FaGithub, FaLinkedin, FaDownload } from "react-icons/fa";
 import { ShineButton } from "./Button";
 import { TypingText } from "./animate-ui/text/typing";
 import HeroAnimation from "./HeroAnimation";
+import { NavLink } from "react-router-dom";
 const HeroSection = () => {
   const handleClick = () => {
     window.location.href = "mailto:kavyanshgupta119@gmail.com";
@@ -30,13 +31,13 @@ const HeroSection = () => {
           </p>
           <div className="hidden md:block">
             <div className="mt-4 flex flex-wrap items-center gap-4">
-              <a href="#Projects">
+              <NavLink to="/projects">
                 <ShineButton
-                  label="See my Projects"
+                  label="See my Work"
                   size="md"
                   bgColor="linear-gradient(325deg, hsla(315, 49%, 43%, 1.00) 0%, hsla(286, 90%, 41%, 1.00) 55%, hsla(313, 42%, 58%, 1.00) 90%)"
                 />
-              </a>
+              </NavLink>
               <ShineButton
                 onClick={handleClick}
                 label="Let’s Work Together"
@@ -53,13 +54,13 @@ const HeroSection = () => {
           </div>
           <div className="md:hidden block">
             <div className="mt-6 flex gap-4">
-              <a href="#Projects">
+              <NavLink to="/projects">
                 <ShineButton
-                  label="See my Projects"
+                  label="See my Work"
                   size="sm"
                   bgColor="linear-gradient(325deg, hsla(315, 49%, 43%, 1.00) 0%, hsla(286, 90%, 41%, 1.00) 55%, hsla(313, 42%, 58%, 1.00) 90%)"
                 />
-              </a>
+              </NavLink>
               <ShineButton
                 onClick={handleClick}
                 label="Let’s Work Together"

@@ -54,7 +54,7 @@ const Hero = () => {
             text={"Explore"}
             duration={100}
             delay={8400}
-            className="absolute left-174 top-124 text-purple-500 text-3xl shadow-2xl"
+            className="absolute left-177 top-124 text-purple-500 text-3xl shadow-2xl"
           />
         </div>
         <div>
