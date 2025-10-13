@@ -34,7 +34,7 @@ const App = () => {
 
   return (
     <>
-      <div className="relative">
+      <div className="">
         <HexagonBackground className="fixed" />
         <SmokeyCursor
           simulationResolution={256}

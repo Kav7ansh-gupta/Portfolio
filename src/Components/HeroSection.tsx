@@ -10,7 +10,7 @@ const HeroSection = () => {
   return (
     <>
       <motion.div
-        className="flex md:flex-row max-w-screen flex-col mt-30   "
+        className="flex md:flex-row max-w-screen flex-col mt-30 px-5 md:px-16   "
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 7, y: 20 }}
         transition={{ duration: 1.8 }}

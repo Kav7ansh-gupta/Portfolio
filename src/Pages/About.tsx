@@ -16,7 +16,7 @@ export default function About() {
       />
       <div className="hidden md:block max-w-screen">
         <div className="flex justify-between ">
-          <OrbitCard className="max-w-6/10  rounded-3xl  shadow-2xl ">
+          <OrbitCard className="max-w-7/10 rounded-3xl shadow-xl mr-10 ">
             <p className="p-2">
               Hi, I’m <span className="text-purple-300">Kavyansh Gupta</span> —
               a passionate BCA student, software developer, and tech enthusiast
@@ -45,7 +45,7 @@ export default function About() {
               projects, and keep pushing my boundaries as I learn and create.
             </p>
           </OrbitCard>
-          <div className="max-w-4/10">
+          <div className="max-w-3/10">
             <div className="">
               <div>
                 <ProfileCard
