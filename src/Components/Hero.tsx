@@ -35,14 +35,14 @@ const Hero = () => {
           <TypingText
             text={"World"}
             duration={100}
-            delay={3000}
-            className="absolute left-163 top-110 text-purple-500 text-5xl shadow-2xl"
+            delay={4700}
+            className="absolute left-168 top-110 text-purple-500 text-5xl shadow-2xl"
           />
           <TypingText
             text={" of Inovation"}
             duration={100}
-            delay={3000}
-            className="absolute left-200 top-110 text-white text-5xl shadow-2xl"
+            delay={5100}
+            className="absolute left-206 top-110 text-white text-5xl shadow-2xl"
           />
           <TypingText
             text={"Continue to"}
