@@ -11,6 +11,8 @@ export default function Projects() {
         animationDuration={1.4}
         pauseBetweenAnimations={3}
       />
+      <div>
+      </div>
     </div>
   );
 }

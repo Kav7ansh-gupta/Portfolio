@@ -170,7 +170,7 @@ const SparkleNavbar: React.FC<SparkleNavbarProps> = ({
       <header className="bg-transparent backdrop-blur-sm fixed w-full top-0 left-0 z-1">
         <nav className="flex items-center justify-between md:px-24 px-4 py-3 md:py-1">
           <div>
-            <p className="text-2xl font-extrabold text-purple-400">
+            <p className="text-2xl font-extrabold text-purple-500">
               Kavs<span className="text-gray-400 ">7</span>ansh
               <span className="text-gray-400 "> •</span> dev
             </p>
