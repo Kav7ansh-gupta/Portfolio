@@ -1,5 +1,4 @@
 import SparkleNavbar from "./Components/Navbar";
-import HeroSection from "./Components/HeroSection";
 import Skills from "./Pages/Skils";
 import About from "./Pages/About";
 import Certifications from "./Pages/Certifications";
