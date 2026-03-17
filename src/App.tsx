@@ -1,6 +1,6 @@
 import SparkleNavbar from "./Components/Navbar";
 import HeroSection from "./Components/HeroSection";
-import Skills from "./Pages/Skils"; 
+import Skills from "./Pages/Skils";
 import About from "./Pages/About";
 import Certifications from "./Pages/Certifications";
 import Dock from "./Components/Dock";
@@ -11,6 +11,7 @@ import { GoProjectSymlink } from "react-icons/go";
 import Footer from "./Components/Footer";
 import { Routes, Route } from "react-router-dom";
 import Projects from "./Pages/Projects";
+import Home from "./Pages/Home";
 
 const App = () => {
   const navItems = [
@@ -34,24 +35,7 @@ const App = () => {
       <div className="">
         <SparkleNavbar items={navItems} />
         <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                {/* <Hero /> */}
-
-                <HeroSection />
-
-                <About />
-
-                <Skills />
-
-                <Projects />
-
-                <Certifications />
-              </>
-            }
-          />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/projects" element={<Projects />} />

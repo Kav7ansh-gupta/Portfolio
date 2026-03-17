@@ -22,7 +22,10 @@ const list = [
 
 export default function Skills() {
   return (
-    <div className="dark:text-white text-black px-5 md:px-16 ">
+    <div className="dark:text-white text-black px-5 md:px-16 my-20">
+      <div>
+        <h2 className="text-5xl font-semibold mb-10">My Skills</h2>
+      </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-8 gap-4">
         {list.map(({ icon, label }) => (
           <div
