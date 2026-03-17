@@ -8,7 +8,6 @@ import {
   FaPython,
   FaJava,
 } from "react-icons/fa";
-import TrueFocus from "../Components/animate-ui/text/TureFocus";
 
 const list = [
   { icon: <FaHtml5 />, label: "HTML5" },
@@ -24,14 +23,6 @@ const list = [
 export default function Skills() {
   return (
     <div className="dark:text-white text-black px-5 md:px-16 ">
-      <TrueFocus
-        sentence="Core Skills"
-        manualMode={false}
-        blurAmount={5}
-        borderColor="purple"
-        animationDuration={1.4}
-        pauseBetweenAnimations={3}
-      />
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-8 gap-4">
         {list.map(({ icon, label }) => (
           <div

@@ -1,8 +1,6 @@
 import SparkleNavbar from "./Components/Navbar";
-import SmokeyCursor from "./Components/BackgroundCursor";
 import HeroSection from "./Components/HeroSection";
-import Skills from "./Pages/Skils";
-import { HexagonBackground } from "./Components/animate-ui/backgrounds/hexagon";
+import Skills from "./Pages/Skils"; 
 import About from "./Pages/About";
 import Certifications from "./Pages/Certifications";
 import Dock from "./Components/Dock";
@@ -13,7 +11,6 @@ import { GoProjectSymlink } from "react-icons/go";
 import Footer from "./Components/Footer";
 import { Routes, Route } from "react-router-dom";
 import Projects from "./Pages/Projects";
-import Hero from "./Components/Hero";
 
 const App = () => {
   const navItems = [
@@ -35,22 +32,13 @@ const App = () => {
   return (
     <>
       <div className="">
-        <HexagonBackground className="fixed" />
-        <SmokeyCursor
-          simulationResolution={256}
-          dyeResolution={2048}
-          densityDissipation={2}
-          curl={5}
-          splatForce={8000}
-          enableShading={true}
-        />
         <SparkleNavbar items={navItems} />
         <Routes>
           <Route
             path="/"
             element={
               <>
-                <Hero />
+                {/* <Hero /> */}
 
                 <HeroSection />
 
