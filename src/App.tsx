@@ -40,12 +40,12 @@ const App = () => {
           <Route path="/projects" element={<Projects />} />
           <Route path="/certification" element={<Certifications />} />
         </Routes>
-        <Dock
+        {/* <Dock
           items={dockItems}
           position="bottom"
           panelHeight={75}
           baseItemSize={50}
-        />
+        /> */}
         <Footer />
       </div>
     </>
