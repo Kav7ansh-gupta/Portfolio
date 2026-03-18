@@ -6,7 +6,7 @@ export default function About() {
       <div className="hidden md:block max-w-screen">
         <h2 className="text-5xl font-semibold mb-10">About Me</h2>
         <div className="flex justify-between gap-9 ">
-          <div className="bg-white/20 p-5 rounded-3xl shadow-3xl shadow-violet-600">
+          <div className="bg-white/20 border-2 p-5 rounded-3xl  shadow-violet-600">
             <p className="p-2">
               Hi, I’m <span className="text-purple-400">Kavyansh Gupta</span> —
               a passionate BCA student, software developer, and tech enthusiast
@@ -68,7 +68,7 @@ export default function About() {
           />
         </div>
         <h2 className="text-5xl font-semibold mb-10">About Me</h2>
-        <div className="bg-white/10 border-1 p-5 rounded-3xl shadow-3xl shadow-violet-600">
+        <div className="bg-white/20 border-2 p-5 rounded-3xl shadow-3xl shadow-violet-600">
           <p className="text-sm">
             Hi, I’m Kavyansh Gupta — a passionate BCA student, software
             developer, and tech enthusiast who loves building creative solutions

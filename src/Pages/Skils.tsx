@@ -1,42 +1,151 @@
-import {
-  FaReact,
-  FaHtml5,
-  FaCss3Alt,
-  FaJsSquare,
-  FaNodeJs,
-  FaGithub,
-  FaPython,
-  FaJava,
-} from "react-icons/fa";
-
-const list = [
-  { icon: <FaHtml5 />, label: "HTML5" },
-  { icon: <FaCss3Alt />, label: "CSS3" },
-  { icon: <FaJsSquare />, label: "JavaScript" },
-  { icon: <FaReact />, label: "React" },
-  { icon: <FaNodeJs />, label: "Node.js" },
-  { icon: <FaGithub />, label: "Git/GitHub" },
-  { icon: <FaPython />, label: "Python" },
-  { icon: <FaJava />, label: "Java" },
-];
-
-export default function Skills() {
+const Skils = () => {
   return (
-    <div className="dark:text-white text-black px-5 md:px-16 my-20">
-      <div>
-        <h2 className="text-5xl font-semibold mb-10">My Skills</h2>
-      </div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-8 gap-4">
-        {list.map(({ icon, label }) => (
-          <div
-            key={label}
-            className="p-4 rounded-xl bg-gray-400/20 backdrop-blur-3xl border border-gray-400 flex flex-col items-center gap-2 hover:-translate-y-1 hover:shadow-blue-300 transition"
-          >
-            <div className="text-3xl dark:text-white text-black">{icon}</div>
-            <p className="text-sm dark:text-white text-black ">{label}</p>
+    <div>
+      <div className="p-5 md:px-16 ">
+        <h1 className="text-5xl font-semibold mb-10">SKILLS</h1>
+        <div className="md:block hidden">
+          <div className="h-[80vh] bg-white/20 border-2 rounded-3xl p-7 overflow-y-scroll flex justify-center">
+            <div className=" h-270 w-1 rounded-full bg-white ">
+              <div className="w-40 h-1 relative left-0 top-10 bg-white ">
+                <div className="relative size-4 bg-purple-400 border-1 rounded-full -top-1.5 right-1.5">
+                  <h3 className="relative uppercase left-43 -top-1">
+                    frontend
+                  </h3>
+                  <div className=" relative w-100 h-26 rounded-2xl bg-purple-400/60 border-1 left-4 -top-1"></div>
+                </div>
+              </div>
+              <div className="w-40 h-1 relative right-40 top-40 bg-white ">
+                <div className="relative size-4 bg-purple-400 border-1 rounded-full -top-1.5 left-38.5">
+                  <h3 className="relative uppercase right-61 -top-1">
+                    frontend
+                  </h3>
+                  <div className=" relative w-100 h-26 rounded-2xl bg-purple-400/60 border-1 right-100 -top-1"></div>
+                </div>
+              </div>
+              <div className="w-40 h-1 relative left-0 top-70 bg-white ">
+                <div className="relative size-4 bg-purple-400 border-1 rounded-full -top-1.5 right-1.5">
+                  <h3 className="relative uppercase left-43 -top-1">
+                    frontend
+                  </h3>
+                  <div className=" relative w-100 h-26 rounded-2xl bg-purple-400/60 border-1 left-4 -top-1"></div>
+                </div>
+              </div>
+              <div className="w-40 h-1 relative right-40 top-100 bg-white ">
+                <div className="relative size-4 bg-purple-400 border-1 rounded-full -top-1.5 left-38.5">
+                  <h3 className="relative uppercase right-61 -top-1">
+                    frontend
+                  </h3>
+                  <div className=" relative w-100 h-26 rounded-2xl bg-purple-400/60 border-1 right-100 -top-1"></div>
+                </div>
+              </div>
+              <div className="w-40 h-1 relative left-0 top-130 bg-white ">
+                <div className="relative size-4 bg-purple-400 border-1 rounded-full -top-1.5 right-1.5">
+                  <h3 className="relative uppercase left-43 -top-1">
+                    frontend
+                  </h3>
+                  <div className=" relative w-100 h-26 rounded-2xl bg-purple-400/60 border-1 left-4 -top-1"></div>
+                </div>
+              </div>
+              <div className="w-40 h-1 relative right-40 top-160 bg-white ">
+                <div className="relative size-4 bg-purple-400 border-1 rounded-full -top-1.5 left-38.5">
+                  <h3 className="relative uppercase right-61 -top-1">
+                    frontend
+                  </h3>
+                  <div className=" relative w-100 h-26 rounded-2xl bg-purple-400/60 border-1 right-100 -top-1"></div>
+                </div>
+              </div>
+              <div className="w-40 h-1 relative left-0 top-190 bg-white ">
+                <div className="relative size-4 bg-purple-400 border-1 rounded-full -top-1.5 right-1.5">
+                  <h3 className="relative uppercase left-43 -top-1">
+                    frontend
+                  </h3>
+                  <div className=" relative w-100 h-26 rounded-2xl bg-purple-400/60 border-1 left-4 -top-1"></div>
+                </div>
+              </div>
+              <div className="w-40 h-1 relative right-40 top-220 bg-white ">
+                <div className="relative size-4 bg-purple-400 border-1 rounded-full -top-1.5 left-38.5">
+                  <h3 className="relative uppercase right-61 -top-1">
+                    frontend
+                  </h3>
+                  <div className=" relative w-100 h-26 rounded-2xl bg-purple-400/60 border-1 right-100 -top-1"></div>
+                </div>
+              </div>
+            </div>
           </div>
-        ))}
+        </div>
+        <div className="md:hidden block">
+          <div className="h-[80vh] bg-white/20 border-2 rounded-3xl p-7 overflow-y-scroll flex justify-center md:hidden">
+            <div className=" h-470 w-1 rounded-full bg-white ">
+              <div className="w-15 h-1 relative left-0 top-10 bg-white ">
+                <div className="relative size-4 bg-purple-400 border-1 rounded-full -top-1.5 right-1.5">
+                  <h3 className="relative uppercase left-18 -top-1">
+                    frontend
+                  </h3>
+                  <div className=" relative w-38 h-50 rounded-2xl bg-purple-400/60 border-1 left-4 -top-1"></div>
+                </div>
+              </div>
+              <div className="w-15 h-1 relative right-15 top-65 bg-white ">
+                <div className="relative size-4 bg-purple-400 border-1 rounded-full -top-1.5 left-13.5">
+                  <h3 className="relative uppercase right-36 -top-1">
+                    frontend
+                  </h3>
+                  <div className=" relative w-38 h-50 rounded-2xl bg-purple-400/60 border-1 right-38.5 -top-1"></div>
+                </div>
+              </div>
+              <div className="w-15 h-1 relative left-0 top-120 bg-white ">
+                <div className="relative size-4 bg-purple-400 border-1 rounded-full -top-1.5 right-1.5">
+                  <h3 className="relative uppercase left-18 -top-1">
+                    frontend
+                  </h3>
+                  <div className=" relative w-38 h-50 rounded-2xl bg-purple-400/60 border-1 left-4 -top-1"></div>
+                </div>
+              </div>
+              <div className="w-15 h-1 relative right-15 top-175 bg-white ">
+                <div className="relative size-4 bg-purple-400 border-1 rounded-full -top-1.5 left-13.5">
+                  <h3 className="relative uppercase right-36 -top-1">
+                    frontend
+                  </h3>
+                  <div className=" relative w-38 h-50 rounded-2xl bg-purple-400/60 border-1 right-38.5 -top-1"></div>
+                </div>
+              </div>
+              <div className="w-15 h-1 relative left-0 top-230 bg-white ">
+                <div className="relative size-4 bg-purple-400 border-1 rounded-full -top-1.5 right-1.5">
+                  <h3 className="relative uppercase left-18 -top-1">
+                    frontend
+                  </h3>
+                  <div className=" relative w-38 h-50 rounded-2xl bg-purple-400/60 border-1 left-4 -top-1"></div>
+                </div>
+              </div>
+              <div className="w-15 h-1 relative right-15 top-285 bg-white ">
+                <div className="relative size-4 bg-purple-400 border-1 rounded-full -top-1.5 left-13.5">
+                  <h3 className="relative uppercase right-36 -top-1">
+                    frontend
+                  </h3>
+                  <div className=" relative w-38 h-50 rounded-2xl bg-purple-400/60 border-1 right-38.5 -top-1"></div>
+                </div>
+              </div>
+              <div className="w-15 h-1 relative left-0 top-340 bg-white ">
+                <div className="relative size-4 bg-purple-400 border-1 rounded-full -top-1.5 right-1.5">
+                  <h3 className="relative uppercase left-18 -top-1">
+                    frontend
+                  </h3>
+                  <div className=" relative w-38 h-50 rounded-2xl bg-purple-400/60 border-1 left-4 -top-1"></div>
+                </div>
+              </div>
+              <div className="w-15 h-1 relative right-15 top-395 bg-white ">
+                <div className="relative size-4 bg-purple-400 border-1 rounded-full -top-1.5 left-13.5">
+                  <h3 className="relative uppercase right-36 -top-1">
+                    frontend
+                  </h3>
+                  <div className=" relative w-38 h-50 rounded-2xl bg-purple-400/60 border-1 right-38.5 -top-1"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
-}
+};
+
+export default Skils;

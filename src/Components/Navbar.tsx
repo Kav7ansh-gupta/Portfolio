@@ -167,9 +167,12 @@ const SparkleNavbar: React.FC<SparkleNavbarProps> = ({
         }
       `}</style>
 
-      <div className="h-18"></div>
-      <header className="bg-white/10 border-b-1 backdrop-blur-sm fixed w-full top-0 left-0 z-1">
-        <nav className="flex items-center justify-between md:px-24 px-4 py-3 md:py-3">
+      <div
+        className="h-20 
+      "
+      ></div>
+      <header className="bg-white/20 border-b-2 backdrop-blur-sm fixed w-full top-0 left-0 z-1">
+        <nav className="flex items-center justify-between md:px-24 px-4 py-6 md:py-3">
           <div>
             <p className="text-2xl font-extrabold text-purple-500">
               Kavs<span className="text-gray-400 ">7</span>ansh

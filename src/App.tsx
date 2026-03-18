@@ -18,7 +18,7 @@ const App = () => {
 
   return (
     <>
-      <div className="">
+      <div className="Home">
         <SparkleNavbar items={navItems} />
         <Routes>
           <Route path="/" element={<Home />} />

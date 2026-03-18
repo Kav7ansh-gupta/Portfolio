@@ -5,3 +5,29 @@
   font-family: "Poppins", sans-serif;
   scrollbar-width: none;
 }
+#root {
+  background: #04003b;
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(4, 0, 59, 1) 0%,
+    rgba(2, 2, 79, 1) 35%,
+    rgba(3, 126, 150, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(4, 0, 59, 1) 0%,
+    rgba(2, 2, 79, 1) 35%,
+    rgba(3, 126, 150, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(4, 0, 59, 1) 0%,
+    rgba(2, 2, 79, 1) 35%,
+    rgba(3, 126, 150, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(
+  startColorstr="#04003B",
+  endColorstr="#037E96",
+  GradientType=1
+);
+}

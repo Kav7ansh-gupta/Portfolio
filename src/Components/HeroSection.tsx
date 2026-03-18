@@ -4,8 +4,8 @@ const HeroSection = () => {
   return (
     <>
       <motion.div>
-        <div className="h-screen w-screen  md:px-16 md:py-10 px-4 py-2">
-          <div className="bg-white/10 rounded-2xl h-full w-full border-1">
+        <div className="md:h-[88vh] w-screen h-[80vh] md:px-16 md:py-1.5 px-4 py-5">
+          <div className="bg-white/20 rounded-2xl h-full w-full border-2">
             <div className="md:px-13 h-full w-full flex flex-col items-center justify-center gap-7">
               <h1 className="text-3xl text-center md:text-7xl font-extrabold uppercase">
                 Hi, I'm <span className="text-purple-400">Kavyansh gupta </span>
