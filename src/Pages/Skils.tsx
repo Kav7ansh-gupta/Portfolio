@@ -1,33 +1,77 @@
+import { motion } from "framer-motion";
 const Skils = () => {
   return (
     <div>
-      <div className="p-5 md:px-16 ">
+      <motion.div
+        initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
+        whileInView={{ opacity: 1, y: 0, filter: "none" }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true }}
+        className="p-5 md:px-16 "
+      >
         <h1 className="text-5xl font-semibold mb-10">SKILLS</h1>
         <div className="md:block hidden">
-          <div className="h-[80vh] bg-white/20 border-2 rounded-3xl p-7 overflow-y-scroll flex justify-center">
+          <div className="h-[80vh] rounded-3xl p-7 overflow-y-scroll flex justify-center">
             <div className=" h-270 w-1 rounded-full bg-white ">
               <div className="w-40 h-1 relative left-0 top-10 bg-white ">
                 <div className="relative size-4 bg-purple-400 border-1 rounded-full -top-1.5 right-1.5">
                   <h3 className="relative uppercase left-43 -top-1">
                     frontend
                   </h3>
-                  <div className=" relative w-100 h-26 rounded-2xl bg-purple-400/60 border-1 left-4 -top-1"></div>
+                  <div className=" relative w-100 h-26 rounded-2xl bg-purple-400/60 border-1 left-4 -top-1 ">
+                    <div className="h-full w-full flex gap-3.5 uppercase items-center justify-evenly ">
+                      <ul className="list-disc ">
+                        <li>html</li>
+                        <li>css</li>
+                        <li>java script</li>
+                      </ul>
+                      <ul className="list-disc">
+                        <li>react</li>
+                        <li>kotlin</li>
+                        <li>next js</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="w-40 h-1 relative right-40 top-40 bg-white ">
                 <div className="relative size-4 bg-purple-400 border-1 rounded-full -top-1.5 left-38.5">
-                  <h3 className="relative uppercase right-61 -top-1">
-                    frontend
+                  <h3 className="relative uppercase right-58 -top-1">
+                    Backend
                   </h3>
-                  <div className=" relative w-100 h-26 rounded-2xl bg-purple-400/60 border-1 right-100 -top-1"></div>
+                  <div className=" relative w-100 h-26 rounded-2xl bg-purple-400/60 border-1 right-100 -top-1">
+                    <div className="h-full w-full flex gap-3.5 uppercase items-center justify-evenly ">
+                      <ul className="list-disc ">
+                        <li className="">nodejs</li>
+                        <li>express</li>
+                        <li>mongo db</li>
+                      </ul>
+                      <ul className="list-disc">
+                        <li>Sql</li>
+                        <li>spring boot</li>
+                        <li>kubernatis</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="w-40 h-1 relative left-0 top-70 bg-white ">
                 <div className="relative size-4 bg-purple-400 border-1 rounded-full -top-1.5 right-1.5">
                   <h3 className="relative uppercase left-43 -top-1">
-                    frontend
+                    Languages
                   </h3>
-                  <div className=" relative w-100 h-26 rounded-2xl bg-purple-400/60 border-1 left-4 -top-1"></div>
+                  <div className=" relative w-100 h-26 rounded-2xl bg-purple-400/60 border-1 left-4 -top-1">
+                    <div className="h-full w-full flex gap-3.5 uppercase items-center justify-evenly ">
+                      <ul className="list-disc ">
+                        <li className="">java</li>
+                        <li>python</li>
+                      </ul>
+                      <ul className="list-disc">
+                        <li>. net</li>
+                        <li>c++</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="w-40 h-1 relative right-40 top-100 bg-white ">
@@ -143,7 +187,7 @@ const Skils = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

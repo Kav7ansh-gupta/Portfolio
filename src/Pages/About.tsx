@@ -1,12 +1,19 @@
 import ProfileCard from "../Components/ProfileCard";
 import { Profile } from "../Assets/assets";
+import { motion } from "framer-motion";
 export default function About() {
   return (
-    <div className="dark:text-white text-black px-5 md:px-16 my-20">
+    <motion.div
+      initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
+      whileInView={{ opacity: 1, y: 0, filter: "none" }}
+      transition={{ duration: 1.2, ease: "easeOut" }}
+      viewport={{ once: true }}
+      className="dark:text-white text-black px-5 md:px-16 my-20"
+    >
       <div className="hidden md:block max-w-screen">
         <h2 className="text-5xl font-semibold mb-10">About Me</h2>
         <div className="flex justify-between gap-9 ">
-          <div className="bg-white/20 border-2 p-5 rounded-3xl  shadow-violet-600">
+          <div className="bg-white/20 border p-5 rounded-3xl  shadow-violet-600">
             <p className="p-2">
               Hi, I’m <span className="text-purple-400">Kavyansh Gupta</span> —
               a passionate BCA student, software developer, and tech enthusiast
@@ -35,10 +42,10 @@ export default function About() {
               projects, and keep pushing my boundaries as I learn and create.
             </p>
           </div>
-          <div className="max-w-3/10">
+          <motion.div className="max-w-3/10 ">
             <ProfileCard
               name="Kavyansh Gupta"
-              title="Software Engineer"
+              title="Software Developer"
               handle="Codewithkav7ansh"
               status="Online"
               contactText="Contact Me"
@@ -48,14 +55,14 @@ export default function About() {
               enableTilt={true}
               enableMobileTilt={false}
             />
-          </div>
+          </motion.div>
         </div>
       </div>
       <div className="block md:hidden my-20">
         <div className="flex justify-center mb-15">
           <ProfileCard
             name="Kavyansh Gupta"
-            title="Software Engineer"
+            title="Software Developer"
             handle="Codewithkav7ansh"
             status="Online"
             contactText="Contact Me"
@@ -97,6 +104,6 @@ export default function About() {
           </p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
